@@ -16,6 +16,13 @@
 		34C610402815925C0079B5D7 /* MVP_API_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6103F2815925C0079B5D7 /* MVP_API_DemoTests.swift */; };
 		34C6104A2815925C0079B5D7 /* MVP_API_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C610492815925C0079B5D7 /* MVP_API_DemoUITests.swift */; };
 		34C6104C2815925C0079B5D7 /* MVP_API_DemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6104B2815925C0079B5D7 /* MVP_API_DemoUITestsLaunchTests.swift */; };
+		34C6105C281597CC0079B5D7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 34C6105B281597CC0079B5D7 /* Alamofire */; };
+		34C6105F281597F30079B5D7 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6105E281597F30079B5D7 /* APIManager.swift */; };
+		34C6106128159C070079B5D7 /* PopulationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6106028159C070079B5D7 /* PopulationPresenter.swift */; };
+		34C6106828159D4E0079B5D7 /* PopulationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6106628159D4E0079B5D7 /* PopulationTableViewCell.swift */; };
+		34C6106928159D4E0079B5D7 /* PopulationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34C6106728159D4E0079B5D7 /* PopulationTableViewCell.xib */; };
+		34C6106C28159E890079B5D7 /* PopulationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6106B28159E890079B5D7 /* PopulationConstant.swift */; };
+		34C6106F2815A1FE0079B5D7 /* PopulationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6106E2815A1FE0079B5D7 /* PopulationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,12 @@
 		34C610452815925C0079B5D7 /* MVP-API-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP-API-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C610492815925C0079B5D7 /* MVP_API_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_API_DemoUITests.swift; sourceTree = "<group>"; };
 		34C6104B2815925C0079B5D7 /* MVP_API_DemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_API_DemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		34C6105E281597F30079B5D7 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		34C6106028159C070079B5D7 /* PopulationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationPresenter.swift; sourceTree = "<group>"; };
+		34C6106628159D4E0079B5D7 /* PopulationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationTableViewCell.swift; sourceTree = "<group>"; };
+		34C6106728159D4E0079B5D7 /* PopulationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopulationTableViewCell.xib; sourceTree = "<group>"; };
+		34C6106B28159E890079B5D7 /* PopulationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationConstant.swift; sourceTree = "<group>"; };
+		34C6106E2815A1FE0079B5D7 /* PopulationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C6105C281597CC0079B5D7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +113,13 @@
 		34C610272815925A0079B5D7 /* MVP-API-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				34C6106D2815A1E60079B5D7 /* Models */,
+				34C6106A28159E600079B5D7 /* Helper */,
+				34C6105D281597D50079B5D7 /* Services */,
+				34C610592815927D0079B5D7 /* Presenters */,
+				34C610582815926F0079B5D7 /* Views */,
 				34C610282815925A0079B5D7 /* AppDelegate.swift */,
 				34C6102A2815925A0079B5D7 /* SceneDelegate.swift */,
-				34C6102C2815925A0079B5D7 /* ViewController.swift */,
-				34C6102E2815925A0079B5D7 /* Main.storyboard */,
 				34C610312815925C0079B5D7 /* Assets.xcassets */,
 				34C610332815925C0079B5D7 /* LaunchScreen.storyboard */,
 				34C610362815925C0079B5D7 /* Info.plist */,
@@ -127,6 +144,57 @@
 			path = "MVP-API-DemoUITests";
 			sourceTree = "<group>";
 		};
+		34C610582815926F0079B5D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34C6106528159D110079B5D7 /* Components */,
+				34C6102C2815925A0079B5D7 /* ViewController.swift */,
+				34C6102E2815925A0079B5D7 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		34C610592815927D0079B5D7 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34C6106028159C070079B5D7 /* PopulationPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34C6105D281597D50079B5D7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				34C6105E281597F30079B5D7 /* APIManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		34C6106528159D110079B5D7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				34C6106628159D4E0079B5D7 /* PopulationTableViewCell.swift */,
+				34C6106728159D4E0079B5D7 /* PopulationTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		34C6106A28159E600079B5D7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				34C6106B28159E890079B5D7 /* PopulationConstant.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		34C6106D2815A1E60079B5D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34C6106E2815A1FE0079B5D7 /* PopulationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +211,9 @@
 			dependencies = (
 			);
 			name = "MVP-API-Demo";
+			packageProductDependencies = (
+				34C6105B281597CC0079B5D7 /* Alamofire */,
+			);
 			productName = "MVP-API-Demo";
 			productReference = 34C610252815925A0079B5D7 /* MVP-API-Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +286,9 @@
 				Base,
 			);
 			mainGroup = 34C6101C2815925A0079B5D7;
+			packageReferences = (
+				34C6105A281597CC0079B5D7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 34C610262815925A0079B5D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +307,7 @@
 			files = (
 				34C610352815925C0079B5D7 /* LaunchScreen.storyboard in Resources */,
 				34C610322815925C0079B5D7 /* Assets.xcassets in Resources */,
+				34C6106928159D4E0079B5D7 /* PopulationTableViewCell.xib in Resources */,
 				34C610302815925A0079B5D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34C6106C28159E890079B5D7 /* PopulationConstant.swift in Sources */,
+				34C6106828159D4E0079B5D7 /* PopulationTableViewCell.swift in Sources */,
+				34C6106128159C070079B5D7 /* PopulationPresenter.swift in Sources */,
+				34C6105F281597F30079B5D7 /* APIManager.swift in Sources */,
 				34C6102D2815925A0079B5D7 /* ViewController.swift in Sources */,
 				34C610292815925A0079B5D7 /* AppDelegate.swift in Sources */,
 				34C6102B2815925A0079B5D7 /* SceneDelegate.swift in Sources */,
+				34C6106F2815A1FE0079B5D7 /* PopulationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +678,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		34C6105A281597CC0079B5D7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		34C6105B281597CC0079B5D7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 34C6105A281597CC0079B5D7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 34C6101D2815925A0079B5D7 /* Project object */;
 }
